@@ -556,10 +556,10 @@ nav.navbar.bootsnav.sticky-header ul.nav>li>a {
 /*****  08. Product area css    *****/
 /************************************/
 
-.products {
+/* .products {
     padding: 100px 0;
     background: url(../images/pricing-bg.png) no-repeat center center;
-}
+} */
 
 .product-single:hover .product-box,
 .product-single.hover .product-box {
@@ -676,7 +676,7 @@ nav.navbar.bootsnav.sticky-header ul.nav>li>a {
 
 .testimonials {
     padding: 100px 0;
-    background: url(../img/header-bg.jpg) no-repeat center center fixed;
+    background: url(../img/image-webp/header/header-bg.webp) no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
