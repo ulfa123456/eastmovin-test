@@ -1,42 +1,32 @@
-# TN - START EXPIRES CACHING #
 <IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType text/css "access 1 month"
-ExpiresByType text/html "access 1 month"
-ExpiresByType image/gif "access 1 year"
-ExpiresByType image/png "access 1 year"
-ExpiresByType image/jpg "access 1 year"
-ExpiresByType image/jpeg "access 1 year"
-ExpiresByType image/x-icon "access 1 year"
-ExpiresByType image/svg+xml "access plus 1 month"
-ExpiresByType audio/ogg "access plus 1 year"
-ExpiresByType video/mp4 "access plus 1 year"
-ExpiresByType video/ogg "access plus 1 year"
-ExpiresByType video/webm "access plus 1 year"
-ExpiresByType application/atom+xml "access plus 1 hour"
-ExpiresByType application/rss+xml "access plus 1 hour"
-ExpiresByType application/pdf "access 1 month"
-ExpiresByType application/javascript "access 1 month"
-ExpiresByType text/x-javascript "access 1 month"
-ExpiresByType text/x-component "access plus 1 month"
-ExpiresByType application/x-shockwave-flash "access 1 month"
-ExpiresByType font/opentype "access plus 1 month"
-ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
-ExpiresByType application/x-font-ttf "access plus 1 month"
-ExpiresByType application/font-woff "access plus 1 month"
-ExpiresByType application/font-woff2 "access plus 1 month"
-ExpiresDefault "access 1 month"
-</IfModule>
-# TN - END EXPIRES CACHING #
+  ExpiresActive On
 
-# TN – ENABLE LITESPEED CACHE START
-<IfModule LiteSpeed>
-CacheEnable public
-RewriteEngine On
-RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
-RewriteCond %{HTTP_HOST} ^sample.com|sample.net|sample.org [NC]
-RewriteCond %{REQUEST_URI} !login|admin|register|post|cron
-RewriteCond %{QUERY_STRING} !nocache
-RewriteRule .* - [E=Cache-Control:max-age=300]
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Video
+  ExpiresByType video/webm "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
 </IfModule>
-# TN – ENABLE LITESPEED CACHE END
