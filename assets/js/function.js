@@ -6,7 +6,7 @@
 
 	/* Preloader Effect */
 	$window.load(function () {
-		$(".preloader").fadeOut(600);
+		$(".preloader").fadeOut(300);
 	});
 
 
