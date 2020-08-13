@@ -1,39 +1,41 @@
 (function ($) {
-    "use strict";
-	
-	var $window = $(window); 
-	var $body = $('body'); 
-	
+	"use strict";
+
+	var $window = $(window);
+	var $body = $('body');
+
 	/* Preloader Effect */
-	$window.load(function() {
+	$window.load(function () {
 		$(".preloader").fadeOut(600);
-    });
-	
+	});
+
 
 	/* Back To Top */
-	$(document).on('click','#back-to-top a',function(){
-		$('body,html').stop().animate({	scrollTop: 0	}, 800);
+	$(document).on('click', '#back-to-top a', function () {
+		$('body,html').stop().animate({
+			scrollTop: 0
+		}, 800);
 		return false;
 	});
-		
+
 	/* Sticky header */
-	$window.scroll(function(){
-    	if ($window.scrollTop() > 200) {
+	$window.scroll(function () {
+		if ($window.scrollTop() > 200) {
 			$('.navbar').addClass('sticky-header');
 		} else {
 			$('.navbar').removeClass('sticky-header');
 		}
 	});
-	
+
 	/* Jump to top button */
-	$window.scroll(function(){
-    	if ($window.scrollTop() > 600) {
+	$window.scroll(function () {
+		if ($window.scrollTop() > 600) {
 			$('.jumptotop').addClass('btn-active');
 		} else {
 			$('.jumptotop').removeClass('btn-active');
 		}
 	});
-	
+
 	/* Our Client slider */
 	var swiper = new Swiper('.ourclient-slider', {
 		grabCursor: true,
@@ -45,17 +47,17 @@
 				slidesPerView: 1,
 				spaceBetween: 0
 			},
-			
+
 			768: {
 				slidesPerView: 3
-				
+
 			}
 		}
 	});
-	
+
 	/* Testimonial Swiper Slider */
 	var swiper = new Swiper('.testimonials-slider', {
-		
+
 		effect: 'coverflow',
 		grabCursor: true,
 		autoplay: true,
@@ -66,12 +68,12 @@
 			stretch: 0,
 			depth: 100,
 			modifier: 1,
-			slideShadows : false,
+			slideShadows: false,
 		},
 		breakpoints: {
 			768: {
 				slidesPerView: 1
-				
+
 			}
 		},
 		pagination: {
@@ -80,26 +82,28 @@
 			clickable: true
 		},
 	});
-	
-	/* Init Counter */
-    $('.counter').counterUp({ delay: 5, time: 2000 });
-	
-	/* Popup video */
-	$('.popup-video').magnificPopup({
-        type: 'iframe',
-        preloader: true,
-    });
-	
-	/* Contact form validation */
-	var $contactform=$("#contactForm");
-	$contactform.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitForm();
-		}
-	});
 
-	function submitForm(){
+	/* Init Counter */
+	// $('.counter').counterUp({ delay: 5, time: 2000 });
+
+	/* Popup video */
+	// $('.popup-video').magnificPopup({
+	// 	type: 'iframe',
+	// 	preloader: true,
+	// });
+
+	/* Contact form validation */
+	// var $contactform = $("#contactForm");
+	// $contactform.validator({
+	// 	focus: false
+	// }).on("submit", function (event) {
+	// 	if (!event.isDefaultPrevented()) {
+	// 		event.preventDefault();
+	// 		submitForm();
+	// 	}
+	// });
+
+	function submitForm() {
 		/* Initiate Variables With Form Content*/
 		var name = $("#name").val();
 		var email = $("#email").val();
@@ -110,23 +114,23 @@
 			type: "POST",
 			url: "form-process.php",
 			data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,
-			success : function(text){
-				if (text == "success"){
+			success: function (text) {
+				if (text == "success") {
 					formSuccess();
 				} else {
-					submitMSG(false,text);
+					submitMSG(false, text);
 				}
 			}
 		});
 	}
 
-	function formSuccess(){
+	function formSuccess() {
 		$contactform[0].reset();
 		submitMSG(true, "Message Sent Successfully!")
 	}
 
-	function submitMSG(valid, msg){
-		if(valid){
+	function submitMSG(valid, msg) {
+		if (valid) {
 			var msgClasses = "h3 text-success";
 		} else {
 			var msgClasses = "h3 text-danger";
@@ -134,16 +138,18 @@
 		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 	}
 	/* Contact form validation end */
-	
+
 	/* Animate with wow js */
-    new WOW({mobile:false}).init(); 
-	
+	// new WOW({
+	// 	mobile: false
+	// }).init();
+
 	/* Parallaxie Js */
 	if ($window.width() > 768) {
 		$('.parallaxie').parallaxie({
 			speed: 0.55,
-			 offset: 0,
+			offset: 0,
 		});
 	}
-	
+
 })(jQuery);
