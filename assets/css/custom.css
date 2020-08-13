@@ -180,7 +180,7 @@ nav.navbar.bootsnav.sticky-header ul.nav>li>a {
     top: 0px;
     left: 0;
     width: 100%;
-    background: url(../img/header.jpg) no-repeat center center fixed;
+    background: url(../img/image-webp/header/header.webp) no-repeat center center fixed;
     background-size: cover;
     padding: 180px 0 200px;
 }
@@ -487,7 +487,7 @@ nav.navbar.bootsnav.sticky-header ul.nav>li>a {
 .about-facts {
     padding: 100px 0;
     position: relative;
-    background: url(../img/header.jpg) no-repeat center center fixed;
+    background: url(../img/image-webp/header/header.webp) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -556,10 +556,10 @@ nav.navbar.bootsnav.sticky-header ul.nav>li>a {
 /*****  08. Product area css    *****/
 /************************************/
 
-/* .products {
+.products {
     padding: 100px 0;
-    background: url(../images/pricing-bg.png) no-repeat center center;
-} */
+    background: url(../img/image-webp/pricing-bg.png) no-repeat center center;
+}
 
 .product-single:hover .product-box,
 .product-single.hover .product-box {
