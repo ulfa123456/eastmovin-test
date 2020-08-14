@@ -558,7 +558,7 @@ nav.navbar.bootsnav.sticky-header ul.nav>li>a {
 
 .products {
     padding: 100px 0;
-    background: url(../img/image-webp/pricing-bg.png) no-repeat center center;
+    background: url(../img/image-webp/pricing-bg.webp) no-repeat center center;
 }
 
 .product-single:hover .product-box,
