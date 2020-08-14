@@ -102,8 +102,22 @@
   <!-- End Facebook Pixel Code -->
 
   <style>
-    .image-res img {
-      max-width: 100%;
+    @media only screen and (min-width: 1024px) {
+      .haha {
+        width: 1024px;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .haha {
+        width: 480px;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .haha {
+        width: 100vw;
+      }
     }
   </style>
 </head>
@@ -381,6 +395,7 @@
   </section>
   <!-- About Facts ends -->
 
+
   <!-- Product Section starts -->
   <section class="products" id="products">
     <div class="container">
@@ -398,17 +413,20 @@
       <div class="row">
         <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
           <div class="product-single">
-            <!-- <img src="assets/img/image-webp/galeri/porto3.webp" srcset="images/flower1-480.jpg 480w, images/flower1-1080.jpg 1080w"
-              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px"> -->
+            <img src="assets/img/image-webp/flower/ori.png"
+              srcset="assets/img/image-webp/flower/480.png 480w, assets/img/image-webp/flower/1080.png 1080w"
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px">
 
-            <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/porto3.webp"
-              src="assets/img/image-webp/galeri/porto3.webp" alt="Rakia navy" />
+            <!-- <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/porto3.webp" src="assets/img/image-webp/galeri/porto3.webp" alt="Rakia navy" /> -->
           </div>
         </div>
         <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
           <div class="product-single">
-            <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/porto5.webp"
-              src="assets/img/image-webp/galeri/porto5.webp" alt="Rakia navy open" />
+            <img src="assets/img/image-webp/flower/ori.png"
+              srcset="assets/img/image-webp/flower/480.png 480w, assets/img/image-webp/flower/1080.png 1080w"
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px">
+
+            <!-- <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/porto5.webp" src="assets/img/image-webp/galeri/porto5.webp" alt="Rakia navy open" /> -->
           </div>
         </div>
         <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
@@ -419,30 +437,46 @@
         </div>
         <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
           <div class="product-single">
-            <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/a.webp"
-              src="assets/img/image-webp/galeri/a.webp" alt="" />
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
-          <div class="product-single">
-            <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/e.webp"
-              src="assets/img/image-webp/galeri/e.webp" alt="" />
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
-          <div class="product-single">
-            <img class="img-responsive" data-fancybox=" mygallery" href="assets/img/image-webp/galeri/f.webp"
-              src="assets/img/image-webp/galeri/f.webp" alt="" />
-          </div>
-        </div>
-        <!-- <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;"> -->
-        <!-- <div class="product-single image-res">
+            <img src="assets/img/image-webp/flower/ori.png"
+              srcset="assets/img/image-webp/flower/480.png 480w, assets/img/image-webp/flower/1080.png 1080w"
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px">
 
-          <img src="assets/img/image-webp/small.png"
-            srcset="assets/img/image-webp/small.png 320w, assets/img/image-webp/medium.png 640w, assets/img/image-webp/large.png 1280w"
-            sizes="(min-width 40em) 576px, (min-width 64em) 720px, (min-width 72em) 960px, 100vw" alt="yah" />
-        </div> -->
-        <!-- </div> -->
+            <!-- <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/a.webp"
+              src="assets/img/image-webp/galeri/a.webp" alt="" /> -->
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
+          <div class="product-single">
+            <img src="assets/img/image-webp/flower/ori.png"
+              srcset="assets/img/image-webp/flower/480.png 480w, assets/img/image-webp/flower/1080.png 1080w"
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px">
+
+            <!-- <img class="img-responsive" data-fancybox="mygallery" href="assets/img/image-webp/galeri/e.webp"
+              src="assets/img/image-webp/galeri/e.webp" alt="" /> -->
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
+          <div class="product-single">
+            <img src="assets/img/image-webp/flower/ori.png"
+              srcset="assets/img/image-webp/flower/480.png 480w, assets/img/image-webp/flower/1080.png 1080w"
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px">
+
+            <!-- <img class="img-responsive" data-fancybox=" mygallery" href="assets/img/image-webp/galeri/f.webp"
+              src="assets/img/image-webp/galeri/f.webp" alt="" /> -->
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 wow fadeInUp" style="margin: 20px 0px;">
+          <div class="product-single">
+            <img src="assets/img/image-webp/flower/ori.png"
+              srcset="assets/img/image-webp/flower/480.png 480w, assets/img/image-webp/flower/1080.png 1080w"
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 480px, 1024px">
+
+            <!-- <img class="haha" src="assets/img/image-webp/medium.png"
+          srcset="assets/img/image-webp/small.png 320px, assets/img/image-webp/large.png 1280px "
+          sizes="(max-width: 320px) 100vw, (max-width: 1024px) 320px, 1280px"> -->
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
