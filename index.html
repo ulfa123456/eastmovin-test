@@ -66,33 +66,7 @@
   	</noscript> -->
   <!-- End Facebook Pixel Code -->
   <!-- Facebook Pixel Code New 22/05/2020 -->
-  <script async>
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = "2.0";
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init", "552935175244773");
-    fbq("init", "595746084545320");
-    fbq("track", "PageView");
-
-    function iAmAttilasEvent() {
-      // Grab those link clickers!!
-      window._fbq.push('track', 'AddToCart');
-      //alert('add to cart!');
-    }
-  </script>
+  <script src="facebook_pixel.js" async></script>
   <noscript>
     <img height="1" width="1" style="display: none;"
       src="https://www.facebook.com/tr?id=552935175244773&ev=PageView&noscript=1" />
@@ -101,7 +75,7 @@
   </noscript>
   <!-- End Facebook Pixel Code -->
 
-  <style>
+  <!-- <style>
     @media only screen and (min-width: 1024px) {
       .haha {
         width: 1024px;
@@ -119,7 +93,7 @@
         width: 100vw;
       }
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
